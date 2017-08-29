@@ -49,8 +49,17 @@ export default {
 
       verEntradas: function()
       {
+        if(this.mdEntradasVisible == false)
+        {
           this.mdEntradasVisible = true;
           this.mdPeliculasVisible = false;
+        }
+        else if(this.mdEntradasVisible == true)
+        {
+          this.mdEntradasVisible = false;
+          this.mdPeliculasVisible = false;
+        }
+        
       },
 
       verPeliculas: function()
