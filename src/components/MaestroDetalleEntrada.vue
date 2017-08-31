@@ -47,6 +47,7 @@
 
                     <button v-on:click="editable(modos.editar)" v-show="btnEditElim">Editar</button>
                     <button v-on:click="editable(modos.eliminar)" v-show="btnEditElim">Eliminar</button>
+                    <button v-on:click="cerrarDetalles" v-show="btnEditElim">Cerrar</button>
                     
                     <br>
                     <br>
@@ -266,6 +267,19 @@ export default {
         },
 
         cancelar: function()
+        {
+            var _this = this;
+
+            _this.refreshList();
+            _this.limpiarCampos();
+            _this.modoNuevo = false;
+            _this.modoDetalle = true;
+            _this.btnAceptarCancelar = false;
+            _this.disable = true;
+            _this.mostrarDetallesContenedor = false;
+        },
+
+        cerrarDetalles: function()
         {
             var _this = this;
 

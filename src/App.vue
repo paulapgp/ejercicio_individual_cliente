@@ -64,8 +64,16 @@ export default {
 
       verPeliculas: function()
       {
-        this.mdPeliculasVisible = true;
-        this.mdEntradasVisible = false;
+        if(this.mdPeliculasVisible == false)
+        {
+          this.mdPeliculasVisible = true;
+          this.mdEntradasVisible = false;
+        }
+        else if(this.mdPeliculasVisible == true)
+        {
+          this.mdPeliculasVisible = false;
+          this.mdEntradasVisible = false;
+        }
       }
         
     }
